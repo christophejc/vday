@@ -52,34 +52,43 @@
     		background-color: #000000 !important;
 		}
 		#banner.style2 {
-                background-image: url("images/valentines-day-banner.jpg");
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                border-bottom: 0 !important;
+                background-image: url("images/valentines-day-banner.jpg") !important;
+                background-position: center !important;
+                background-size: cover !important;
+                background-repeat: no-repeat !important;
+                background-attachment: fixed !important;
+                position: relative;
+                z-index: 0;
         }
 
         #banner.style2:after {
                 content: '';
-                /* This is your dark tint */
-                background-color: rgba(0, 0, 0, 0.7) !important; 
-                /* This line KILLS the default blue/purple gradient */
-                background-image: none !important; 
+                display: block !important;
                 position: absolute;
-                width: 100%;
-                height: 100%;
                 top: 0;
                 left: 0;
+                width: 100%;
+                height: 100%;
+                /* Use rgba for the 'hue' effect: 0,0,0 is black, 0.6 is 60% visibility */
+                background-color: rgba(0, 0, 0, 0.6) !important;
+                /* This line is CRITICAL to remove the template's blue gradient */
+                background-image: none !important;
+                /* Keep this at 1 so the rgba color actually shows up */
                 opacity: 1 !important;
-                z-index: 1;
+                z-index: 1 !important;
         }
 
         #banner.style2 .inner {
-                position: relative;
-                z-index: 2;
+                position: relative !important;
+                z-index: 2 !important;
         }
-		
+		.image img {
+                width: 100%;
+                height: 450px; /* Set this to whatever height you want them both to be */
+                object-fit: cover;
+                object-position: top;
+                display: block;
+        }
     </style>
 	</head>
 	<body class="is-preload">
@@ -115,11 +124,10 @@
 								<img src="images/pic07.jpg" alt="" />
 							</span>
 							<header class="major">
-								<h1>Landing</h1>
+								<h1>Highlights</h1>
 							</header>
 							<div class="content">
-								<p>Lorem ipsum dolor sit amet nullam consequat<br />
-								sed veroeros. tempus adipiscing nulla.</p>
+								<p>In light of our 3rd VDAY together, these are MY TOP 5 Moments power rankings...</p>
 							</div>
 						</div>
 					</section>
@@ -128,147 +136,118 @@
 					<div id="main">
 
 						<!-- One -->
-							<section id="one">
+							<section id="one" style="background-color: #000000 !important; border-top: none;">
 								<div class="inner">
 									<header class="major">
-										<h2>Sed amet aliquam</h2>
+										<h2>Note*</h2>
 									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
+									<p>* These are ESPECIALLY me biased, so don't start talm bout "be serious!" *</p>
 								</div>
 							</section>
 
 						<!-- Two -->
-							<section id="two" class="spotlights">
+							<section id="two" class="spotlights" >
 								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic08.jpg" alt="" data-position="center center" />
+									<a class="image">
+										<video src="images/dumpling.MOV" autoplay loop muted playsinline 
+                       						style="width: 100%; height: 600px; object-fit: cover; display: block;">
+                						</video>
 									</a>
-									<div class="content">
+									<div class="content" style="background-color: #c9184a !important; border-top: none;">
 										<div class="inner">
 											<header class="major">
-												<h3>Orci maecenas</h3>
+												<h3>#5 DTF Dupe Dumplings</h3>
 											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
+											<p>Man these dumplings were so mf fye, on top of it being a lil sentimental thing with it being Din Tai Fung. I
+												lowkey think you might've been mad at me for something this night, but either way first time I made dumplings!</p>
+											
 										</div>
 									</div>
 								</section>
+								
 								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic09.jpg" alt="" data-position="top center" />
+									<a class="image">
+										<img src="images/sleep.jpg" alt="" data-position="top center" />
 									</a>
-									<div class="content">
+									<div class="content" style="background-color: #ff758f !important; border-top: none;">
 										<div class="inner">
 											<header class="major">
-												<h3>Rhoncus magna</h3>
+												<h3>#4 First Thanksgiving!</h3>
 											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
+											<p>Pretty self explanatory here, got to actually meet the family in their natural habitat. And it was really
+												 nice seeing how you just fit into the family dynamic while cooking and allat. Also took part in my annual
+												Itis Nap!</p>
+											
 										</div>
 									</div>
 								</section>
-								<section>
-									<a href="generic.html" class="image">
-										<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Sed nunc ligula</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-							</section>
 
-						<!-- Three -->
-							<section id="three">
-								<div class="inner">
-									<header class="major">
-										<h2>Massa libero</h2>
-									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button next">Get Started</a></li>
-									</ul>
-								</div>
+								<section style="background-color: #c9184a !important; border-top: none;">
+									<a class="image">
+										<img src="images/pizza.jpg" alt="" data-position="center center" />
+									</a>
+									<a class="image">
+										<img src="images/pizza2.jpg" alt="" data-position="center center" />
+									</a>
+									<div class="content" style="background-color: #c9184a !important; border-top: none;">
+										<div class="inner">
+											<header class="major">
+												<h3>#3 iGlizzy Joke/ Making Pizza's</h3>
+											</header>
+											<p>I wasn't completely sure if these happened on the exact same day, but I feel like it did (if not, def close enough).
+												Regardless, that was easily one of the funniest moments of this relationship and looking back its so stupid, but its OUR stupid.
+												Also making those pizzas was one of our first kinda "dates" and I'm be forever grateful to be put onto jalapenos on pizza :)
+											</p>
+										
+										</div>
+									</div>
+								</section>
+								<section>
+									<a class="image">
+										<img src="images/vegas.jpg" alt="" data-position="top center" style="height: 600px !important;"/>
+									</a>
+									<div class="content" style="background-color: #ff758f !important; border-top: none;">
+										<div class="inner">
+											<header class="major">
+												<h3>#2 Mandalay Bay Escape + Chipotle from God</h3>
+											</header>
+											<p>Dipping out on the day party early to get back to the telly before everyone [+1], Take a "shower" [+1000000],
+												 Order some drunk Chipotle [+10], Take a 4 hour nap w/ my sweets [+20], Spin the block on that bowl cold with them Doritioes [+infinity].
+
+												 One of the best days of 2025 easily. 
+											</p>
+											
+										</div>
+									</div>
+								</section>
+								<section>
+									<a class="image">
+										<img src="images/ps2.jpg" alt="" data-position="25% 25%" />
+										<img src="images/ps3.jpg" alt="" data-position="25% 25%" />
+										<img src="images/ps4.jpg" alt="" data-position="25% 25%" />
+									</a>
+									<div class="content" style="background-color: #c9184a !important; border-top: none;">
+										<div class="inner">
+											<header class="major">
+												<h3>#1 Playing House in Palm Springs</h3>
+											</header>
+											<p>It's just something when I think about that Palm Springs cooking, going out, watching movies, and listening to the new Drake + PND 
+												that brings me back to a happy place. There was no need for clubs or parties; just throwing down in the kitchen, having some drinks
+												, and enjoying each others' company...loved that little life for us. 
+											</p>
+											
+										</div>
+									</div>
+								</section>
 							</section>
 
 					</div>
 
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">information@untitled.tld</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(000) 000-0000 x12387</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>1234 Somewhere Road #5432<br />
-										Nashville, TN 00000<br />
-										United States of America</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
-
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner">
-							<ul class="icons">
-								<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
 							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Stophe+Scoob</li><li> <a>Love ya girl</a></li>
 							</ul>
 						</div>
 					</footer>
